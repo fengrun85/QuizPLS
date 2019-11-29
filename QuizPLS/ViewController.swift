@@ -12,6 +12,7 @@ import UIKit
 
 
 class ViewController: UIViewController {
+    var progressPercentage =  0.0
     //index number of my questions
     var currentQuestion = 0
     //score of the quiz
@@ -33,6 +34,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var Option3: UIButton!
     @IBOutlet weak var Option4: UIButton!
     
+    @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet var tapGesture: UITapGestureRecognizer!
     
     var questionsSet = [Question(questionStatement: "What is the largest planet in the Solar System?", firstChoice: "Earth", secondChoice: "Mars", thirdChoice: "Saturn", fourthChoice: "Jupiter", correctChoice: .four, answeredCorrectly: false), Question(questionStatement: "How many main rings does Saturn have?", firstChoice: "10", secondChoice: "3", thirdChoice: "6", fourthChoice: "8", correctChoice: .two, answeredCorrectly: false),Question(questionStatement: "What is the closest planet to the Sun", firstChoice: "Mercury", secondChoice: "Venus", thirdChoice: "Mars", fourthChoice: "Saturn", correctChoice: .one, answeredCorrectly: false), Question(questionStatement: "How far is the moon from Earth", firstChoice: "384400km", secondChoice: "348000km", thirdChoice: "376300km", fourthChoice: "34350km", correctChoice: .one, answeredCorrectly: false), Question(questionStatement: "What is the average surface temperature on Neptune", firstChoice: "-214°C", secondChoice: "-114°C", thirdChoice: "-21°C", fourthChoice: "-43°C", correctChoice: .one, answeredCorrectly: false), Question(questionStatement: "How long is a day on Mercury?", firstChoice: "6 Earth days", secondChoice: "176 Earth days", thirdChoice: "61 Earth days", fourthChoice: "16 Earth days", correctChoice: .two, answeredCorrectly: false), Question(questionStatement: "What is the sixth planet from the Sun?", firstChoice: "Jupiter", secondChoice: "Neptune", thirdChoice: "Saturn", fourthChoice: "Uranus", correctChoice: .three, answeredCorrectly: false)]
@@ -46,6 +48,7 @@ class ViewController: UIViewController {
         quizStarted = true
         tapGesture.isEnabled = false
         continueLabel.isHidden = true
+        progressBar.progress = 0.0
     }
 
     @IBAction func option1Clicked(_ sender: Any) {
@@ -164,6 +167,9 @@ class ViewController: UIViewController {
         Option4.isEnabled = false
         tapGesture.isEnabled = true
         continueLabel.isHidden = false
+        progressPercentage+=1.0/Double(questionsSet.count)
+        print(progressPercentage)
+        progressBar.setProgress(Float(progressPercentage) , animated: true)
     }
     
     

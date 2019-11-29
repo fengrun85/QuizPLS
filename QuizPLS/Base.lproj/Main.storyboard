@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlanetsBG" translatesAutoresizingMaskIntoConstraints="NO" id="gQX-RD-Mjz">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818.00000000000023"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QMg-ID-HtJ">
                                 <rect key="frame" x="30" y="546" width="354" height="310"/>
@@ -93,10 +93,10 @@
                                 </constraints>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🕐 0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gsa-li-YK1">
-                                <rect key="frame" x="284" y="84" width="110" height="40"/>
+                                <rect key="frame" x="259" y="84" width="135" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.92759138200616253" blue="0.12909547624336248" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="110" id="Bjc-oI-I3g"/>
+                                    <constraint firstAttribute="width" constant="135" id="Bjc-oI-I3g"/>
                                     <constraint firstAttribute="height" constant="40" id="E2H-dp-F7n"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
@@ -107,7 +107,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Anywhere to Continue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7Z-Pi-aoF">
-                                <rect key="frame" x="50" y="394" width="314" height="28.666666666666686"/>
+                                <rect key="frame" x="50" y="394" width="314" height="29"/>
                                 <color key="backgroundColor" red="1" green="0.92759138200000002" blue="0.1290954762" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
@@ -152,6 +152,7 @@
                         <outlet property="Option3" destination="gxI-7v-3SJ" id="RcE-ch-CYf"/>
                         <outlet property="Option4" destination="IOE-lM-0Zj" id="GhE-zH-ziE"/>
                         <outlet property="continueLabel" destination="N7Z-Pi-aoF" id="g20-8U-S0F"/>
+                        <outlet property="progressBar" destination="zOZ-37-p8H" id="0vW-z5-7HG"/>
                         <outlet property="questionLabel" destination="bgO-Yb-8Eq" id="J27-W4-2Q5"/>
                         <outlet property="tapGesture" destination="rsS-1r-6Id" id="G1A-g0-HWn"/>
                         <outlet property="timerLabel" destination="Gsa-li-YK1" id="85S-IA-UlN"/>
@@ -164,7 +165,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="492.18749999999994" y="78.184480234260604"/>
+            <point key="canvasLocation" x="492.08633093525185" y="77.889447236180899"/>
         </scene>
     </scenes>
     <resources>
